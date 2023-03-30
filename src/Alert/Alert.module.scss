@@ -1,0 +1,39 @@
+@import "../variables.scss";
+
+.Alert {
+  padding: 8px 40px;
+  header::before {
+    color: #fff1f0;
+    font-weight: 100;
+    border-radius: 50%;
+    background-color: #ff4d4f;
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 10px;
+    height: 14px;
+    width: 14px;
+    content: "✖";
+    &.error {
+    }
+  }
+  &.error {
+    background: #fff1f0;
+    border: 1px solid #ffa39e;
+    border-radius: 8px;
+  }
+  &.info {
+    box-sizing: border-box;
+  }
+  &.success {
+    box-sizing: border-box;
+  }
+  &.warning {
+    box-sizing: border-box;
+  }
+  &.banner {
+    box-sizing: border-box;
+  }
+}

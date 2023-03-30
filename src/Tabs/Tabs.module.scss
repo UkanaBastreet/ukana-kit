@@ -1,0 +1,44 @@
+@import "../variables.scss";
+
+.Tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  .header {
+    height: 40px;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+    .tab {
+      font-weight: 400;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-style: 14px;
+      width: 88px;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.02);
+      /* colorSplit */
+
+      border-width: 1px 1px 0px 1px;
+      border-style: solid;
+      border-color: #0000000f;
+      border-radius: 6px 6px 0px 0px;
+    }
+    .tab.active {
+      background-color: #fff;
+      font-weight: 600;
+      color: #1677ff;
+      z-index: 1;
+    }
+  }
+  .body {
+    display: flex;
+    justify-content: center;
+    margin-top: -1px;
+    border-top: 1px solid #0000000f;
+  }
+}

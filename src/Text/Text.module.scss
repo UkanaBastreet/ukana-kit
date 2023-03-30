@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+.Text {
+  outline: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+  &.primary {
+    color: #1677ff;
+  }
+  &.secondary {
+    color: #000000a6;
+  }
+  &.success {
+    color: #52c41a;
+  }
+  &.warning {
+    color: #faad14;
+  }
+  &.danger {
+    color: #ff4d4f;
+  }
+  &.disabled {
+    color: #00000040;
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &.delete {
+    text-decoration: line-through;
+  }
+  &.italic {
+    font-style: italic;
+  }
+  &.strong {
+    font-weight: bold;
+  }
+  &.mark {
+    background: #ffd666;
+  }
+  &.editable::before {
+    content: " ✎ ";
+  }
+}

@@ -1,0 +1,11 @@
+.Input {
+  transition: 0.1s;
+  padding: 5px 12px !important;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #00000026;
+  outline: none;
+  &:focus {
+    border: 1px solid #1677ff;
+  }
+}

@@ -1,0 +1,94 @@
+@import "../variables.scss";
+
+.Tag {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  //types
+  &.default {
+    box-sizing: border-box;
+  }
+  > span {
+    margin: 0 8px;
+  }
+  &.closable {
+    &::after {
+      font-size: 10px;
+      font-weight: 600;
+      content: "✕";
+      margin-right: 4px;
+      margin-bottom: -2px;
+    }
+  }
+  &.new {
+    &::before {
+      content: "+";
+      margin-left: 4px;
+    }
+  }
+  //dashed
+  &.dashed {
+    border-style: dashed;
+  }
+  //colors
+  &.magenta {
+    color: #eb2f96;
+    border-color: #ffadd2;
+    background-color: #fff0f6;
+  }
+  &.blue {
+    color: #1677ff;
+    border-color: #91caff;
+    background-color: #e6f4ff;
+  }
+  &.cyan {
+    color: #13c2c2;
+    border-color: #87e8de;
+    background-color: #e6fffb;
+  }
+  &.geekBlue {
+    color: #2f54eb;
+    border-color: #adc6ff;
+    background-color: #f0f5ff;
+  }
+  &.gold {
+    color: #faad14;
+    border-color: #ffe58f;
+    background-color: #fffbe6;
+  }
+  &.green {
+    color: #52c41a;
+    border-color: #b7eb8f;
+    background-color: #f6ffed;
+  }
+  &.lime {
+    color: #a0d911;
+    border-color: #eaff8f;
+    background-color: #fcffe6;
+  }
+  &.orange {
+    color: #fa8c16;
+    border-color: #ffd591;
+    background-color: #fff7e6;
+  }
+  &.purple {
+    color: #722ed1;
+    border-color: #d3adf7;
+    background-color: #f9f0ff;
+  }
+  &.red {
+    color: #f5222d;
+    border-color: #ffa39e;
+    background-color: #fff1f0;
+  }
+  &.volcano {
+    color: #fa541c;
+    border-color: #ffbb96;
+    background-color: #fff2e8;
+  }
+}

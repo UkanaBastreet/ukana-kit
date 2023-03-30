@@ -1,0 +1,41 @@
+.Checkbox {
+  display: inline-flex;
+  align-items: center;
+  .handle {
+    margin-right: 4px;
+    transition: 0.1s;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    background-color: #fff;
+    border: 1px solid #00000026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      border-color: #1677ff;
+    }
+    .check {
+      position: relative;
+      .flag {
+        position: absolute;
+        top: -7px;
+        left: -2px;
+        transform: rotate(45deg);
+        width: 5px;
+        height: 10px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+  .handle.active {
+    background-color: #1677ff;
+    &:hover {
+      background-color: #4096ff;
+      border-color: #4096ff;
+    }
+  }
+}

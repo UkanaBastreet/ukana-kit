@@ -1,0 +1,108 @@
+@import "../variables.scss";
+
+.Badge {
+  &.basic {
+    font-size: 14px;
+    padding: 0;
+    background-color: #ff4d4f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    &.dot {
+      height: 6px;
+      width: 6px;
+    }
+    &.default {
+      padding: 0 4px;
+      border-radius: 12px;
+      min-width: 23px;
+      height: 23px;
+      text-overflow: ellipsis;
+    }
+    &.small {
+      box-sizing: border-box;
+    }
+  }
+  &.status {
+    display: flex;
+    // align-items: baseline;
+    > .round {
+      align-self: flex-end;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      > div {
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+      }
+      > .success {
+        background-color: #52c41a;
+      }
+      > .default {
+        background-color: #00000040;
+      }
+      > .error {
+        background-color: #ff4d4f;
+      }
+      > .processing {
+        background-color: #1677ff;
+      }
+      > .warning {
+        background-color: #faad14;
+      }
+    }
+    > .text {
+      display: flex;
+      > p {
+        margin: 0;
+        line-height: 14px;
+        font-size: 14px;
+      }
+    }
+  }
+  &.ribbon {
+    &.blue {
+      color: #1677ff;
+      border-color: #91caff;
+      background-color: #e6f4ff;
+    }
+    &.volcano {
+      color: #fa541c;
+      border-color: #ffbb96;
+      background-color: #fff2e8;
+    }
+    &.magenta {
+      color: #eb2f96;
+      border-color: #ffadd2;
+      background-color: #fff0f6;
+    }
+    &.red {
+      color: #f5222d;
+      border-color: #ffa39e;
+      background-color: #fff1f0;
+    }
+    &.cyan {
+      color: #13c2c2;
+      border-color: #87e8de;
+      background-color: #e6fffb;
+    }
+    &.green {
+      color: #52c41a;
+      border-color: #b7eb8f;
+      background-color: #f6ffed;
+    }
+    &.purple {
+      color: #722ed1;
+      border-color: #d3adf7;
+      background-color: #f9f0ff;
+    }
+  }
+}
