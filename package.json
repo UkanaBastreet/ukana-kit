@@ -1,0 +1,34 @@
+{
+  "name": "ukana-kit",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "webpack",
+    "patch": "webpack && npm version patch && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/sass": "^1.45.0",
+    "css-loader": "^6.7.3",
+    "css-modules-typescript-loader": "^4.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-loader": "^13.2.1",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "files": [
+    "dist"
+  ]
+}
