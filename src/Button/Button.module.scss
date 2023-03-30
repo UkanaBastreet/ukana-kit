@@ -5,13 +5,13 @@
   $red-default-color: #ff4d4f;
   $red-light-color: #ff7875;
   $red-dark-color: #cf1322;
+  box-sizing: border-box;
 
   & {
     flex: none;
     order: 1;
     flex-grow: 0;
     align-self: baseline;
-    box-sizing: border-box;
 
     outline: none;
     cursor: pointer;

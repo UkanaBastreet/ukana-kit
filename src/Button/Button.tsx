@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
+import { clns } from "../helpers";
 import s from "./Button.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,14 +19,12 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={[
+      className={clns(
         s.Button,
         size ? s[size] : "",
         s[view],
-        danger ? s.danger : "",
-      ]
-        .join(" ")
-        .trim()}
+        danger ? s.danger : ""
+      )}
       {...props}
     >
       {children}

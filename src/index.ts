@@ -1,5 +1,4 @@
 export { TreeSelect } from "./TreeSelect/TreeSelect";
-export { Text } from "./Text/Text";
 export { Tag } from "./Tag/Tag";
 export { Tabs } from "./Tabs/Tabs";
 export { Switch } from "./Switch/Switch";
@@ -13,3 +12,4 @@ export { Badge } from "./Badge/Badge";
 export { Anchor } from "./Anchor/Anchor";
 export { Alert } from "./Alert/Alert";
 export { Autocomplete } from "./Autocomplete/Autocomplete";
+export { Quote } from "./Quote/Quote";

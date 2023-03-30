@@ -1,0 +1,12 @@
+import React from 'react';
+import { clns } from "../helpers";
+#STYLE#
+interface #NAME#Props {};
+
+export const #NAME#: React.FC<#NAME#Props> = ({children,...props}) => {
+  return (
+    <>
+      <div className={clns(s.#NAME#)}>{children}</div>
+      </>
+    );
+};
