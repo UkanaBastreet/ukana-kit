@@ -1,5 +1,5 @@
 import React from "react";
-import { clns } from "../helpers";
+import { clns } from "../../helpers";
 
 import s from "./Quote.module.scss";
 

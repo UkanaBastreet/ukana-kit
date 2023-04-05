@@ -1,5 +1,5 @@
 import React, { Component, FC, ReactNode } from "react";
-import { clns } from "../helpers";
+import { clns } from "../../helpers";
 import s from "./Badge.module.scss";
 
 type BadgeProps = basicBadgeProps | statusBadgeProps | ribbonBadgeProps;
@@ -33,24 +33,21 @@ interface ribbonBadgeProps {
   color?: "blue" | "volcano" | "magenta" | "red" | "cyan" | "green" | "purple";
 }
 
-const BasicBadge: FC<Omit<basicBadgeProps, "type">> = ({
-  children,
-  size = "default",
-}) => {
+const BasicBadge: FC<Omit<basicBadgeProps, "type">> = ({ children, size }) => {
   return (
-    <span className={clns(s.Badge, s.basic, s[size])}>
+    <span className={clns(s.Badge, s.basic, size ? s[size] : s.default)}>
       {size !== "dot" && children}
     </span>
   );
 };
 const StatusBadge: FC<Omit<statusBadgeProps, "type">> = ({
   children,
-  view = "default",
+  view,
 }) => {
   return (
     <span className={clns(s.Badge, s.status)}>
       <div className={clns(s.round)}>
-        <div className={clns(s[view])}></div>
+        <div className={clns(view ? s[view] : s.default)}></div>
       </div>
       <div className={clns(s.text)}>
         <p>{children}</p>
@@ -62,5 +59,9 @@ const RibbonBadge: FC<Omit<ribbonBadgeProps, "type">> = ({
   children,
   color = "blue",
 }) => {
-  return <span className={clns(s.Badge, s.ribbon, s[color])}>{children}</span>;
+  return (
+    <span className={clns(s.Badge, s.ribbon, color ? s[color] : s.blue)}>
+      {children}
+    </span>
+  );
 };
