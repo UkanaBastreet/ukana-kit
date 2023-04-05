@@ -10,27 +10,24 @@ module.exports = {
       name: "component",
       files: {
         /* Component folder structure declaration */
-        index: {
-            name: 'index.ts',
-            file: 'index.tmp'
-        },
         component: {
           name: "[name].tsx",
-          file: [
-            { name: "fc.tmp", description: "Functional component" },
-          ],
+          file: [{ name: "fc.tmp", description: "Functional component" }],
+          optional: false,
+          default: true,
         },
         style: {
           name: "[name].module.scss",
-          file: [{ name: "style.tmp", description: "Module scss" }],
+          file: [{ name: "style.tmp", description: "Style file view" }],
+          optional: false,
           default: true,
         },
-        // stories: {
-        //   name: "[name].stories.tsx",
-        //   file: "stories.tmp",
-        // //   optional: true,
-        //   default: false,
-        // },
+        declare: {
+          name: "[name].module.scss.d.ts",
+          file: [{ name: "declare.tmp", description: "Declare file view" }],
+          optional: false,
+          default: true,
+        },
       },
     },
   ],
@@ -39,7 +36,7 @@ module.exports = {
     NAME: ({ componentName }) => componentName,
     COMPONENT_FILE_PREFIX: ({ filePrefix }) => filePrefix,
     STYLE: ({ files }) =>
-      files.style ? `\nimport s from './${files.style.name}';\n` : "",
+      files.style ? `\nimport s from './${files.style.name}';` : "",
     STORY_PATH: ({ join, project, destinationFolder, componentName }) =>
       join(project, destinationFolder, componentName),
   },

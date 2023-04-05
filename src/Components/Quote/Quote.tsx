@@ -25,16 +25,19 @@ export const Quote: React.FC<QuoteProps> = ({
 }) => {
   return (
     <>
-      <div
+      <p
         className={clns(
           s.Quote,
           color ? s[color] : "",
           view ? s[view] : "",
           editable ? s.editable : ""
         )}
+        contentEditable={editable}
+        suppressContentEditableWarning
+        {...props}
       >
-        {children}
-      </div>
+        {children?.toString()}
+      </p>
     </>
   );
 };
