@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "patch-build": "webpack && npm version patch && npm publish",
-    "patch": "npm version patch && npm publish"
+    "patch": "npm version patch && npm publish",
+    "git-commit": "git add . && git commit -m \"some fixes\" && git push"
   },
   "keywords": [],
   "author": "",
