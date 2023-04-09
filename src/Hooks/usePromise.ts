@@ -12,4 +12,5 @@ export const usePromise = <T extends unknown>(promise: Promise<T>) => {
   }, []);
 
   return state;
+  // return [ isFetching, data, error]
 };

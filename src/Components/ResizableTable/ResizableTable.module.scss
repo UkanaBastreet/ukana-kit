@@ -1,0 +1,48 @@
+/* ResizableTable.module.scss */
+
+.resizableTableWrapper {
+  position: relative;
+  overflow: auto;
+
+  .resizeHandle {
+    position: absolute;
+    right: -5px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    cursor: col-resize;
+  }
+
+  &:hover .resizeHandle {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+}
+
+.resizableTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  th {
+    background: #f5f5f5;
+    position: relative;
+
+    .columnHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &:hover .resizeHandle {
+      display: block;
+    }
+  }
+}
