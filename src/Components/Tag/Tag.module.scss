@@ -7,15 +7,15 @@
   border-radius: 4px;
   cursor: pointer;
   //size
-  .small {
+  &.small {
     padding: 1px 8px;
     border-radius: 4px;
   }
-  .default {
+  &.default {
     font-size: 14px;
     padding: 5px 16px;
   }
-  .large {
+  &.large {
     line-height: 24px;
     font-size: 16px;
     padding: 8px 16px;
