@@ -17,7 +17,8 @@ interface TagProps {
     | "red"
     | "volcano";
   dashed?: boolean;
-  type?: "closable" | "new" | "default";
+  type?: "closable" | "new" | "common";
+  size?: "default" | "small" | "large";
   onClick?: (e: any) => void;
   title?: string;
 }
@@ -25,14 +26,21 @@ interface TagProps {
 export const Tag: React.FC<TagProps> = ({
   children,
   dashed,
-  type = "default",
+  type,
   title,
   color,
+  size,
 }) => {
   return (
     <div
       title={title}
-      className={[s.Tag, color ? s[color] : "", s[type], dashed ? s.dashed : ""]
+      className={[
+        s.Tag,
+        color ? s[color] : "",
+        size ? s[size] : s.default,
+        type ? s[type] : s.common,
+        dashed ? s.dashed : "",
+      ]
         .join(" ")
         .trim()}
     >

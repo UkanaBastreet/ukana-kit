@@ -7,8 +7,23 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  //size
+  .small {
+    padding: 1px 8px;
+    border-radius: 4px;
+  }
+  .default {
+    font-size: 14px;
+    padding: 5px 16px;
+  }
+  .large {
+    line-height: 24px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
   //types
-  &.default {
+  &.common {
     box-sizing: border-box;
   }
   > span {
