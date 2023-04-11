@@ -15,6 +15,7 @@ export { Alert } from "./Components/Alert/Alert";
 export { Autocomplete } from "./Components/Autocomplete/Autocomplete";
 export { Quote } from "./Components/Quote/Quote";
 export { Menu } from "./Components/Menu/Menu";
+export { Header } from "./Components/Header/Header";
 // Hooks
 export { useDebounce } from "./Hooks/useDebounce";
 export { useAnimationFrame } from "./Hooks/useAnimationFrame";

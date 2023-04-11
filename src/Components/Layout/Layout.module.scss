@@ -1,0 +1,10 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  &.basic {
+    box-sizing: border-box;
+  }
+  &.withSider {
+    box-sizing: border-box;
+  }
+}
