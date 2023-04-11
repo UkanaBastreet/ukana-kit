@@ -29,3 +29,4 @@ export { useScroll } from "./Hooks/useScroll";
 export { useSessionStorage } from "./Hooks/useSessionStorage";
 export { useTimeout } from "./Hooks/useTimeout";
 export { useToggle } from "./Hooks/useToggle";
+export { useFetch } from "./Hooks/useFetch";

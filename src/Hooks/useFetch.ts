@@ -8,7 +8,7 @@ type Response<Data> = {
   error?: Error;
 };
 
-const useFetch = <Data>(
+export const useFetch = <Data>(
   url: string,
   method: RequestMethod = "GET",
   headers: HeadersInit = {},
@@ -44,5 +44,3 @@ const useFetch = <Data>(
 
   return { loading, data, error };
 };
-
-export default useFetch;
